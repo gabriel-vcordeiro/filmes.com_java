@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Filmes.com</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel='stylesheet' href='./ASSETS/root.css'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body class="align">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+
+            $(document).ready(function () {
+                // Função para validar a senha
+                $("#login").prop("disabled", true);
+                $("#login").css("opacity", 0.5);// Bloqueia o botão de cadastro
+
+                function validarSenha() {
+                    var senha = $("#senha").val();
+                    var nome = $("#nome").val();
+
+                    if (senha === "" || nome === "") {
+                        $("#login").prop("disabled", true);
+                        $("#login").css("opacity", 0.5);// Bloqueia o botão de cadastro
+                    } else {
+                        $("#login").prop("disabled", false);
+                        $("#login").css("opacity", 1.0);
+                        // Habilita o botão de cadastro
+                    }
+                }
+
+                // Chama a função quando o campo de senha ou confirmação de senha for alterado
+                $("#senha, #nome").on("input", validarSenha);
+            });
+        </script>
+        <div class="grid align__item">
+
+            <div class="register">
+                <div class="logo">
+
+                    <img class="imagem_logo " src="./ASSETS/logo.png">
+                </div>
+
+                <span>Faça seu login!</span>
+
+                <form action="LoginServlet" method="post">
+
+                    <div class="form__field">
+                        <input type="text" name="nome" id="nome" placeholder="Nome">
+                    </div>
+
+                    <div class="form__field">
+                        <input type="password" name="senha" id="senha" placeholder="••••••••••••">
+                    </div>
+
+                    <div class="form__field">
+                        <input id ="login" type="submit" value="Logar">
+                    </div>
+
+                </form>
+
+                <p>Quer se cadastrar? <a href="CadastroServlet">Cadastre-se</a></p>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
+

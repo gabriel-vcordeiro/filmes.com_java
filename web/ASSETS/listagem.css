@@ -1,0 +1,74 @@
+
+#documentos{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#documentos thead tr{
+    background: #333;
+    color: #fff;
+}
+
+#documentos th,
+#documentos td{
+    padding: 10px 10px;
+    text-align: center;
+    width: auto;
+    border-right: 1px solid #ffffff69;
+}
+
+#documentos tbody tr{
+    border-bottom: 1px solid #ddd;
+}
+
+/* PSEUDO CLASSE - PALAVRA CHAVE QUE IRÁ MUDAR O ESTADO DE UM ELEMTNO */
+#documentos tbody tr:nth-child(odd){
+    background: #f9f9f9;
+}
+
+#documentos tbody tr:hover{
+    color: rgba(111,125,168,0.6);
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#documentos tfoot{
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 10px solid #333;
+}
+
+.btn-excluir{
+    background: none;
+    border: none;
+}
+
+.btn-excluir:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.img-excluir{
+    width:20px;
+}
+
+.btn-alterar{
+    background: none;
+    border: none;
+}
+
+.btn-alterar:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.img-alterar{
+    width:20px;
+}
+.img-estrela{
+    width:25px;
+}.botoes{
+    display: flex;
+    align-items: center;
+}
